@@ -1,0 +1,25 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Trade {
+  trade_id   String   @id @default(auto()) @map("_id") @db.ObjectId
+  user_id    Int // @map("user_id") - in future when you have multiple users
+  utc_time   DateTime
+  operation  String
+  base_coin  String
+  quote_coin String
+  amount     Float
+  price      Float
+}
