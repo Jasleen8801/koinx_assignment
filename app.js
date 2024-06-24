@@ -10,6 +10,9 @@ dotenv.config();
 
 // Routes
 app.use("/api/trades", tradeRoutes);
+app.get("/", (req, res) => {
+  res.send("Welcome to the Trade API");
+});
 
 // Error handler
 app.use((err, req, res, next) => {
@@ -22,6 +25,6 @@ app.use((err, req, res, next) => {
   })
 })
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
+app.listen(8080, () => {
+  console.log(`Server is running on port ${8080}`);
 });

@@ -1,0 +1,6 @@
+runtime: nodejs22
+
+env_variables:
+  PORT: 8080
+  NODE_ENV: production
+  DATABASE_URL: "mongodb+srv://jkaur1be21:zqVRzwiEirfsTuul@database.siqdeub.mongodb.net/database?retryWrites=true&w=majority&appName=databas"
