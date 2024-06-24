@@ -12,7 +12,7 @@
 - [Getting Started](#getting_started)
 - [Prerequisites](#prerequisites)
 - [Installing](#installing)
-<!-- - [Deployment](#deployment) -->
+- [Deployment](#deployment)
 - [Built Using](#built_using)
 
 ## 🧐 About <a name = "about"></a>
@@ -65,9 +65,31 @@ npm start
 npm run dev
 ```
 
-<!-- ## 🚀 Deployment <a name = "deployment"></a>
+## 🚀 Deployment <a name = "deployment"></a>
 
-Add additional notes about how to deploy this on a live system. -->
+You can find the deployed version of this API on Google Cloud Platform at the following URL:
+https://koinx-assignment-427413.uc.r.appspot.com/
+
+## 📝 API Documentation
+
+### 1. API to upload a CSV file containing trade data
+
+```bash
+https://koinx-assignment-427413.uc.r.appspot.com/api/trades/upload-csv/api/trades/upload-csv
+```
+
+- Method: POST
+- Request Body: Form-data with a key `file` containing the CSV file
+
+### 2. API to retrieve asset-wise balances at a given timestamp
+
+```bash
+https://koinx-assignment-427413.uc.r.appspot.com/api/trades/balances/api/trades/asset-balances
+```
+
+- Method: POST
+- Request Body: JSON object with the following fields:
+  - `timestamp`: Timestamp in ISO format (e.g., "2021-08-01T00:00:00.000Z")
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
@@ -75,4 +97,4 @@ Add additional notes about how to deploy this on a live system. -->
 - [Express](https://expressjs.com/) - Server Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 - [Prisma](https://www.prisma.io/) - ORM
-
+- [Google Cloud Platform](https://cloud.google.com/) - Cloud Platform
